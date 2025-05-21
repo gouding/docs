@@ -41,14 +41,48 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Build Apps",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        {
+          "group": "Web",
+          "pages": [
+            "essentials/markdown",
+            "essentials/code",
+            "essentials/images",
+            "essentials/settings",
+            "essentials/navigation"
+          ]
+        },
+        {
+          "group": "APP",
+          "pages": [
+            {
+              "group": "iOS",
+              "pages": [
+                "essentials/reusable-snippets"
+              ]
+            },
+            {
+              "group": "Android",
+              "pages": [
+                "essentials/reusable-snippets"
+              ]
+            },
+            {
+              "group": "Flutter",
+              "pages": [
+                "essentials/reusable-snippets"
+              ]
+            },
+            {
+              "group": "HarmonyOS NEXT",
+              "pages": [
+                "essentials/reusable-snippets"
+              ]
+            }
+          ]
+        }
+        
       ]
     },
     {
