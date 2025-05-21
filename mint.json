@@ -31,7 +31,6 @@
       "url": "api-reference"
     }
   ],
-  
   "navigation": [
     {
       "group": "Get Started",
@@ -59,11 +58,51 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Online",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        {
+          "group": "API List",
+          "pages": [
+            {
+              "group": "IM",
+              "pages": [
+                "api-reference/endpoint/online/apilist/im/get",
+                "api-reference/endpoint/online/apilist/im/create",
+                "api-reference/endpoint/online/apilist/im/delete"
+              ]
+            },
+            {
+              "group": "Knowledge Center",
+              "pages": [
+                "api-reference/endpoint/online/apilist/knowledge_center/get",
+                "api-reference/endpoint/online/apilist/knowledge_center/create"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "WebHooks",
+          "pages": [
+            "api-reference/endpoint/online/webhooks/get",
+            "api-reference/endpoint/online/webhooks/create"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Voice",
+      "pages": [
+        "api-reference/endpoint/voice/get",
+        "api-reference/endpoint/voice/create",
+        "api-reference/endpoint/voice/delete"
+      ]
+    },
+    {
+      "group": "Agent Management",
+      "pages": [
+        "api-reference/endpoint/agent_management/get",
+        "api-reference/endpoint/agent_management/create",
+        "api-reference/endpoint/agent_management/delete"
       ]
     }
   ],
