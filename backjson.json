@@ -1,0 +1,586 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI Plant Store",
+    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "license": {
+      "name": "MIT"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://sandbox.mintlify.com"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/exts/search": {
+      "post": {
+        "summary": "分页条件查询分机帐号",
+        "deprecated": false,
+        "description": "分页条件查询分机帐号",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "creatorId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "creationTime",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "updateUserId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updatedTime",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "currPage",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "orderByName",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderByASC",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "partition",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "startExt",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "batchNum",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "enabled",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "extensions.key",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ext",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bindStatus",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "bindTime",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "agentUuid",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "currentUsingAgentUuid",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "agentName",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "extType",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ha1",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ha1b",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "langCode",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "langCodeTxt",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "header",
+            "description": "公司ID",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "description": "",
+            "example": "{{authorization}}",
+            "schema": {
+              "type": "string",
+              "default": "{{authorization}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseResult%C2%ABPageList%C2%ABExt%C2%BB%C2%BB"
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "apiVersion": "",
+                      "status": "",
+                      "code": 0,
+                      "message": "",
+                      "reason": "",
+                      "kind": "",
+                      "metaData": {
+                        "creatorId": "",
+                        "creationTime": 0,
+                        "updateUserId": "",
+                        "updatedTime": 0
+                      },
+                      "data": {
+                        "list": [
+                          {
+                            "creatorId": "",
+                            "creationTime": 0,
+                            "updateUserId": "",
+                            "updatedTime": 0,
+                            "pageSize": 0,
+                            "currPage": 0,
+                            "orderByName": "",
+                            "orderByASC": false,
+                            "partition": false,
+                            "startExt": "",
+                            "batchNum": 0,
+                            "enabled": 0,
+                            "extensions": {
+                              "": null
+                            },
+                            "companyId": "",
+                            "id": "",
+                            "ext": "",
+                            "password": "",
+                            "bindStatus": 0,
+                            "bindTime": 0,
+                            "agentUuid": "",
+                            "currentUsingAgentUuid": "",
+                            "agentName": "",
+                            "extType": 0,
+                            "domain": "",
+                            "ha1": "",
+                            "ha1b": "",
+                            "status": 0,
+                            "langCode": "",
+                            "langCodeTxt": ""
+                          }
+                        ],
+                        "currPage": 0,
+                        "pageSize": 0,
+                        "total": 0
+                      },
+                      "retMsg": "",
+                      "retCode": ""
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+	"/exts/idle/search": {
+		"post": {
+		  "summary": "查询未被使用的分机帐号",
+		  "deprecated": false,
+		  "description": "查询未被使用的分机帐号",
+		  "tags": [],
+		  "parameters": [
+			{
+			  "name": "companyId",
+			  "in": "path",
+			  "description": "公司ID",
+			  "required": true,
+			  "schema": {
+				"type": "string"
+			  }
+			},
+			{
+			  "name": "companyId",
+			  "in": "query",
+			  "description": "",
+			  "required": false,
+			  "schema": {
+				"type": "string"
+			  }
+			},
+			{
+			  "name": "operatorUserId",
+			  "in": "query",
+			  "description": "",
+			  "required": false,
+			  "schema": {
+				"type": "string"
+			  }
+			},
+			{
+			  "name": "tempId",
+			  "in": "query",
+			  "description": "",
+			  "required": false,
+			  "schema": {
+				"type": "string"
+			  }
+			},
+			{
+			  "name": "language",
+			  "in": "query",
+			  "description": "",
+			  "required": false,
+			  "schema": {
+				"type": "string"
+			  }
+			},
+			{
+			  "name": "timezone",
+			  "in": "query",
+			  "description": "",
+			  "required": false,
+			  "schema": {
+				"type": "string"
+			  }
+			},
+			{
+			  "name": "timezoneid",
+			  "in": "query",
+			  "description": "",
+			  "required": false,
+			  "schema": {
+				"type": "string"
+			  }
+			},
+			{
+			  "name": "authorization",
+			  "in": "header",
+			  "description": "",
+			  "example": "{{authorization}}",
+			  "schema": {
+				"type": "string",
+				"default": "{{authorization}}"
+			  }
+			}
+		  ],
+		  "requestBody": {
+			"content": {
+			  "application/json": {
+				"schema": {
+				  "$ref": "#/components/schemas/BaseRequest",
+				  "description": ""
+				}
+			  }
+			}
+		  },
+		  "responses": {
+			"200": {
+			  "description": "",
+			  "content": {
+				"application/json": {
+				  "schema": {
+					"$ref": "#/components/schemas/ResponseResult%C2%ABAgent%C2%BB"
+				  },
+				  "examples": {
+					"1": {
+					  "summary": "成功示例",
+					  "value": {
+						"apiVersion": "",
+						"status": "",
+						"code": 0,
+						"message": "",
+						"reason": "",
+						"kind": "",
+						"metaData": {
+						  "creatorId": "",
+						  "creationTime": 0,
+						  "updateUserId": "",
+						  "updatedTime": 0
+						},
+						"data": {
+						  "creatorId": "",
+						  "creationTime": 0,
+						  "updateUserId": "",
+						  "updatedTime": 0,
+						  "pageSize": 0,
+						  "currPage": 0,
+						  "orderByName": "",
+						  "orderByASC": false,
+						  "partition": false,
+						  "enabled": 0,
+						  "extensions": {
+							"": null
+						  },
+						  "companyId": "",
+						  "id": "",
+						  "agentID": "",
+						  "agentName": "",
+						  "agentNick": "",
+						  "agentEmail": "",
+						  "phone": "",
+						  "currentPhoneType": "",
+						  "telephone": "",
+						  "qq": "",
+						  "remarks": "",
+						  "depart": "",
+						  "departId": "",
+						  "role": "",
+						  "roleId": "",
+						  "agentStatus": 0,
+						  "loginStatus": 0,
+						  "callStatus": 0,
+						  "workStatus": 0,
+						  "contact": "",
+						  "wrapUpTime": 0,
+						  "companyWrapUpTime": 0,
+						  "wrapUpType": 0,
+						  "lastLoginTime": 0,
+						  "queueName": "",
+						  "queueUuid": "",
+						  "queueID": "",
+						  "extId": "",
+						  "ext": "",
+						  "extType": "",
+						  "loginStatusList": "",
+						  "timeZoneId": "",
+						  "timeZone": "",
+						  "phoneTypes": [
+							{
+							  "phoneType": "",
+							  "isDefault": false,
+							  "defaultPhoneType": false
+							}
+						  ],
+						  "arrayDepartIds": [
+							""
+						  ],
+						  "keyWord": ""
+						},
+						"retMsg": "",
+						"retCode": ""
+					  }
+					}
+				  }
+				}
+			  },
+			  "headers": {}
+			}
+		  },
+		  "security": []
+		}
+	  }
+  },
+  "components": {
+    "schemas": {
+      
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

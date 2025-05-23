@@ -29,6 +29,10 @@
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Build Apps",
+      "url": "build-apps"
     }
   ],
   "navigation": [
@@ -38,51 +42,6 @@
         "introduction",
         "quickstart",
         "development"
-      ]
-    },
-    {
-      "group": "Build Apps",
-      "pages": [
-        {
-          "group": "Web",
-          "pages": [
-            "essentials/markdown",
-            "essentials/code",
-            "essentials/images",
-            "essentials/settings",
-            "essentials/navigation"
-          ]
-        },
-        {
-          "group": "APP",
-          "pages": [
-            {
-              "group": "iOS",
-              "pages": [
-                "essentials/reusable-snippets"
-              ]
-            },
-            {
-              "group": "Android",
-              "pages": [
-                "essentials/reusable-snippets"
-              ]
-            },
-            {
-              "group": "Flutter",
-              "pages": [
-                "essentials/reusable-snippets"
-              ]
-            },
-            {
-              "group": "HarmonyOS NEXT",
-              "pages": [
-                "essentials/reusable-snippets"
-              ]
-            }
-          ]
-        }
-        
       ]
     },
     {
@@ -113,22 +72,16 @@
               ]
             }
           ]
-        },
-        {
-          "group": "WebHooks",
-          "pages": [
-            "api-reference/endpoint/online/webhooks/get",
-            "api-reference/endpoint/online/webhooks/create"
-          ]
         }
       ]
     },
     {
       "group": "Voice",
       "pages": [
-        "api-reference/endpoint/voice/get",
-        "api-reference/endpoint/voice/create",
-        "api-reference/endpoint/voice/delete"
+        "api-reference/endpoint/voice/exts_search",
+        "api-reference/endpoint/voice/exts_dle_search",
+        "api-reference/endpoint/voice/exts_dle_page_search",
+        "api-reference/endpoint/voice/unbind"
       ]
     },
     {
@@ -137,6 +90,45 @@
         "api-reference/endpoint/agent_management/get",
         "api-reference/endpoint/agent_management/create",
         "api-reference/endpoint/agent_management/delete"
+      ]
+    },
+    {
+      "group": "Web",
+      "pages": [
+        "build-apps/markdown",
+        "build-apps/code",
+        "build-apps/images",
+        "build-apps/settings",
+        "build-apps/navigation"
+      ]
+    },
+    {
+      "group": "APP",
+      "pages": [
+        {
+          "group": "iOS",
+          "pages": [
+            "build-apps/reusable-snippets"
+          ]
+        },
+        {
+          "group": "Android",
+          "pages": [
+            "build-apps/reusable-snippets"
+          ]
+        },
+        {
+          "group": "Flutter",
+          "pages": [
+            "build-apps/reusable-snippets"
+          ]
+        },
+        {
+          "group": "HarmonyOS NEXT",
+          "pages": [
+            "build-apps/reusable-snippets"
+          ]
+        }
       ]
     }
   ],

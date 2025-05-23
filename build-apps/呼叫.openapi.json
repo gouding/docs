@@ -4153,17 +4153,1236 @@
   },
   "components": {
     "schemas": {
-    
-    },
-    "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer"
+      "MetaData": {
+        "type": "object",
+        "properties": {
+          "creatorId": {
+            "type": "string",
+            "description": ""
+          },
+          "creationTime": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "updateUserId": {
+            "type": "string",
+            "description": ""
+          },
+          "updatedTime": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          }
+        }
+      },
+      "Map": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "null"
+          }
+        }
+      },
+      "Ext": {
+        "type": "object",
+        "properties": {
+          "creatorId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "creationTime": {
+            "type": "integer",
+            "description": "",
+            "default": "时间戳",
+            "nullable": true
+          },
+          "updateUserId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "updatedTime": {
+            "type": "integer",
+            "description": "",
+            "default": "时间戳",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "",
+            "default": "10",
+            "nullable": true
+          },
+          "currPage": {
+            "type": "integer",
+            "description": "",
+            "default": "1",
+            "nullable": true
+          },
+          "orderByName": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "orderByASC": {
+            "type": "boolean",
+            "description": "",
+            "nullable": true
+          },
+          "partition": {
+            "type": "boolean",
+            "description": "",
+            "nullable": true
+          },
+          "startExt": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "batchNum": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "extensions": {
+            "$ref": "#/components/schemas/Map",
+            "description": ""
+          },
+          "companyId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "ext": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "bindStatus": {
+            "type": "integer",
+            "description": "",
+            "default": "0",
+            "nullable": true
+          },
+          "bindTime": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "agentUuid": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "currentUsingAgentUuid": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentName": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "extType": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "domain": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "ha1": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "ha1b": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "langCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "langCodeTxt": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "PageList«Ext»": {
+        "type": "object",
+        "properties": {
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ext",
+              "description": "com.sobot.sdk.entity.ext.Ext"
+            },
+            "description": "",
+            "nullable": true
+          },
+          "currPage": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«PageList«Ext»»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageList%C2%ABExt%C2%BB",
+            "description": ""
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "PhoneType": {
+        "type": "object",
+        "properties": {
+          "phoneType": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "isDefault": {
+            "type": "boolean",
+            "description": "",
+            "nullable": true
+          },
+          "defaultPhoneType": {
+            "type": "boolean",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "Agent": {
+        "type": "object",
+        "properties": {
+          "creatorId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "creationTime": {
+            "type": "integer",
+            "description": "",
+            "default": "时间戳",
+            "nullable": true
+          },
+          "updateUserId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "updatedTime": {
+            "type": "integer",
+            "description": "",
+            "default": "时间戳",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "",
+            "default": "10",
+            "nullable": true
+          },
+          "currPage": {
+            "type": "integer",
+            "description": "",
+            "default": "1",
+            "nullable": true
+          },
+          "orderByName": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "orderByASC": {
+            "type": "boolean",
+            "description": "",
+            "nullable": true
+          },
+          "partition": {
+            "type": "boolean",
+            "description": "",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "extensions": {
+            "$ref": "#/components/schemas/Map",
+            "description": ""
+          },
+          "companyId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentID": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentName": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentNick": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentEmail": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "currentPhoneType": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "telephone": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "qq": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "depart": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "departId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "roleId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentStatus": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "loginStatus": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "callStatus": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "workStatus": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "contact": {
+            "type": "string",
+            "description": "说明:contact的格式：内部分机: user/1001; PSTN电话号码: sofia/gateway/sipporxy/13911112222 ;机器人: sofia/gateway/sipporxy/AI-19cf6f1aa3f04e38a96977abd0fb0b68-1475050965-1;",
+            "nullable": true
+          },
+          "wrapUpTime": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "companyWrapUpTime": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "wrapUpType": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "lastLoginTime": {
+            "type": "integer",
+            "description": "",
+            "default": "时间戳",
+            "nullable": true
+          },
+          "queueName": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "queueUuid": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "queueID": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "extId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "ext": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "extType": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "loginStatusList": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "timeZoneId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "timeZone": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "phoneTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PhoneType",
+              "description": "com.sobot.sdk.entity.agent.PhoneType"
+            },
+            "description": "",
+            "nullable": true
+          },
+          "arrayDepartIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "",
+            "nullable": true
+          },
+          "keyWord": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«Agent»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/Agent",
+            "description": ""
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "BaseRequest": {
+        "type": "object",
+        "properties": {
+          "agentID": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentType": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ExtSearch": {
+        "type": "object",
+        "properties": {
+          "agentID": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentType": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "currPage": {
+            "type": "integer",
+            "description": "",
+            "default": "1",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "",
+            "default": "10",
+            "nullable": true
+          },
+          "ext": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«Ext»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/Ext",
+            "description": "com.sobot.sdk.entity.ext.Ext"
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "": {
+        "type": "object",
+        "properties": {}
+      },
+      "PageList": {
+        "type": "object",
+        "properties": {
+          "list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {}
+            },
+            "description": "",
+            "nullable": true
+          },
+          "currPage": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«PageList»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageList",
+            "description": ""
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«Integer»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "BatchDetail": {
+        "type": "object",
+        "properties": {
+          "successCount": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "failedCount": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«BatchDetail»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/BatchDetail",
+            "description": ""
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ExtRegistered": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "",
+            "nullable": true
+          },
+          "ext": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "user": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "registeredSize": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "size": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«ExtRegistered»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/ExtRegistered",
+            "description": ""
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ExtVO": {
+        "type": "object",
+        "properties": {
+          "ext": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "bindStatus": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "bindTime": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "agentUUID": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "agentName": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "langCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "langCodeTxt": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "PageList«ExtVO»": {
+        "type": "object",
+        "properties": {
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExtVO",
+              "description": "com.sobot.sdk.entity.ext.ExtVO"
+            },
+            "description": "",
+            "nullable": true
+          },
+          "currPage": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult«PageList«ExtVO»»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageList%C2%ABExtVO%C2%BB",
+            "description": ""
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "key": {
+        "type": "object",
+        "properties": {}
+      },
+      "Map«Object»": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "$ref": "#/components/schemas/key"
+          }
+        }
+      },
+      "ResponseResult«Map«Object»»": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "code": {
+            "type": "integer",
+            "description": "",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "$ref": "#/components/schemas/Map%C2%ABObject%C2%BB",
+            "description": ""
+          },
+          "retMsg": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "retCode": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "ResponseResult": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": ""
+          },
+          "status": {
+            "type": "string",
+            "description": ""
+          },
+          "code": {
+            "type": "integer",
+            "description": ""
+          },
+          "message": {
+            "type": "string",
+            "description": ""
+          },
+          "reason": {
+            "type": "string",
+            "description": ""
+          },
+          "kind": {
+            "type": "string",
+            "description": ""
+          },
+          "metaData": {
+            "$ref": "#/components/schemas/MetaData",
+            "description": ""
+          },
+          "data": {
+            "type": "object",
+            "properties": {}
+          },
+          "retMsg": {
+            "type": "string",
+            "description": ""
+          },
+          "retCode": {
+            "type": "string",
+            "description": ""
+          }
+        }
       }
-    }
+    },
+    "securitySchemes": {}
   },
-  "servers": [{
-    "url": "https://sg.sobot.io"
-  }],
-  "security": []
+  "servers": [],
+  "security": {}
 }
